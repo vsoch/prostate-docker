@@ -1,7 +1,9 @@
 
 library(randomForestSRC)
+options(device=NULL)
 
 # Model must be built in production environment or will have endian error
+# This model was build using the Docker environment and saved to the image repo
 local_files = list.files()
 if ("model.rda" %in% local_files){
   load("model.rda")  
@@ -9,14 +11,10 @@ if ("model.rda" %in% local_files){
   penn.cr = read.csv(file = "pennData.csv", stringsAsFactors = FALSE)
   rsf.cr <- rfsrc(Surv(time, event) ~ PSA + SM + ECE + SVI + LNI + pG1 + pG2 + age + rpyear + race + BMI, data = penn.cr, seed = 23, importance = "random")  
   save(rsf.cr,file="model.rda")
-  #save(rsf.cr,file="web/model.rda")
 }
 
 # Function to get bmi from weight and height
 bmi = function(h,w) {(w * 703)/(h*h)}
-
-palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
-          "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
 
 # Render interface with initial values
 data = c()
