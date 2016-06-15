@@ -8,8 +8,8 @@ We have developed a tool called RAPS (Risks After Prostate Surgery) that uses a 
 
 The application has been dockerized, meaning that it can be deployed locally with Docker. You should first install the [docker engine](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/) for your platform, and then clone the repo, and run the application:
 
-      git clone https://github.com/vsoch/prostate-raps
-      cd prostate-raps
+      git clone https://github.com/vsoch/prostate-docker
+      cd prostate-docker
       docker-compose up -d
 
 Then open up your browser to `127.0.0.1:3838` to use the application.
