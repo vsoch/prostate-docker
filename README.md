@@ -12,4 +12,6 @@ The application has been dockerized, meaning that it can be deployed locally wit
       cd prostate-raps
       docker-compose up -d
 
+Then open up your browser to `127.0.0.1:3838` to use the application.
+
 If you are interested in the codebase to deploy to [http://shinyapps.io](http://shinyapps.io) please see the [prostate](https://github.com/vsoch/prostate) repo.
