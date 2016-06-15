@@ -1,0 +1,6 @@
+shiny:
+  image: vanessa/prostate-raps
+  volumes:
+    - .:/code
+  ports:
+    - "3838:3838"

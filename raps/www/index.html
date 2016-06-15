@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Prediction of Prostate Cancer Recurrence after Radical Prostatectomy</title>
+        <meta name="keywords" content="prostate,cancer" />
+        <meta name="description" content="" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/Favicon.ico">
+        
+        <!-- Google Web Font Embed -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+        <link href="js/colorbox/colorbox.css"  rel='stylesheet' type='text/css'>
+        <link href="css/style.css"  rel='stylesheet' type='text/css'>
+
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js"  type="text/javascript"></script>
+        <script src="js/stickUp.min.js"  type="text/javascript"></script>
+        <script src="js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
+        <script src="js/shiny.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="https://internal.shinyapps.io/vsoch/prostate/css/shiny.css"/> 
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    
+
+    </head>
+    
+    <body>
+
+        <div class="templatemo-top-menu">
+            <div class="container">
+                <!-- Static navbar -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                                <a href="#" class="navbar-brand"><h3 style="margin-top:10px">Stanford Medicine</h3></a>
+                        </div>
+                        <div class="navbar-collapse collapse" id="templatemo-nav-bar">
+                            <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
+                                <li><a href="#about">ABOUT</a></li>
+                                <li><a href="#collaborators">COLLABORATORS</a></li>
+                                <li><a href="#tool">TOOL</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                </div><!--/.navbar -->
+            </div> <!-- /container -->
+        </div>
+        
+        <div>
+        <div class="welcome" id="welcome">
+            <div class="container">
+                <div class="big-slogan text-center">
+                    <span class="txt_darkgrey">Risks After </span><span style="color:#BB1702">Prostate Surgery</span>
+                    <p class="txt_slogan"><i>Prediction of Prostate Cancer Recurrence after Radical Prostatectomy</i></p>
+                </div>  
+            </div>
+        </div>
+        
+
+        <div class="about" id="about">
+            <div class="container">
+                <div class="clearfix"> </div>
+                    <h4 class="row row_team text-center">
+Welcome to RAPS (Risks After Prostate Surgery), a prediction tool that uses the personal characteristics of a patient after surgery for prostate cancer to estimate his probabilities of: a) prostate cancer recurrence, and b) dying without recurrence within 10 years of radical prostatectomy for his cancer.
+                    </h4>
+                    <div class="text-center" style="padding-top:40px; padding-bottom:60px">
+                        <a href="#tool"><button class="btn btn-lg btn-default" type="button">Use the Tool</button></a>
+                    </div>
+            </div>
+        </div><!-- /about -->
+
+        <div class="partners" id="collaborators">
+            <div class="container">
+                <div class="row">
+              
+                    <div class="clearfix"></div>
+                    <div class="text-center">
+
+                        <div style="margin-top:60px;">
+                            <ul class="list-inline">
+                                <li class="col-sm-2 col-md-2 partner-item">
+                                    <a href="http://medicine.stanford.edu" target= "_blank">
+                                    <img src="images/stanford.gif" class="img-responsive" alt="partner 1" /></a>
+                                </li>
+                                <li class="col-sm-2 col-md-2 partner-item">
+                                    <a href="http://www.med.upenn.edu/" target= "_blank">
+                                    <img src="images/penn.png" class="img-responsive" alt="partner 2" /></a>
+                                </li>
+                                <li class="col-sm-2 col-md-2 partner-item">
+                                    <a href="#"><img src="images/blank.png" class="img-responsive" alt="partner 3" /></a>
+                                </li>
+                                <li class="col-sm-2 col-md-2 partner-item">
+                                    <a href="#"><img src="images/blank.png" class="img-responsive" alt="partner 4" /></a>
+                                </li>
+                                <li class="col-sm-2 col-md-2 partner-item">
+                                    <a href="#"><img src="images/blank.png" class="img-responsive" alt="partner 5" /></a>
+                                </li>
+                                <li class="col-sm-2 col-md-2 partner-item">
+                                    <a href="#"><img src="images/blank.png" class="img-responsive" alt="partner 6" /></a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Close collaborators -->
+
+        <!--Tool-->
+        <div class="tool" id="tool">
+            <div class="container">
+                <div class="clearfix"> </div>
+
+                    <!--Input Data Form-->
+                    <div class="row" style="margin-top:40px; margin-bottom:40px">
+
+                    <form class="form-inline" action="" method="">  
+         
+
+                    <!--Demographics, etc-->
+                    
+                    <div class="col-md-4">
+                    <h4 style="margin-bottom:50px">Demographics at surgery</h4>
+                         <div class="input-group">
+                            <label for="rpyear">Calendar year of radical prostatectomy</label>
+                            <div class="input-group">
+                                 <input type="number" name="year" value="2004" min="1900" max="2100" />
+                                <div class="input-group-addon">YYYY</div>
+                            </div>
+                        </div>
+
+                        <!--PSA (pre-operative level of serum prostate-specific antigen (PSA)-->
+                        <div class="input-group">
+                            <label for="psa">PSA (pre-operative level of serum prostate-specific antigen (PSA)</label>
+                            <div class="input-group">
+                                    <input type="number" name="psa" value="14" min="0" max="100" />         
+                                    <div class="input-group-addon">ng/ml</div>
+                            </div>
+                        </div>
+
+                        <!--age (years) at radical prostatectomy-->
+                        <div class="input-group">
+                            <label for="age">Age (years) at radical prostatectomy</label>
+                            <div class="input-group">
+                                    <input type="number" name="age" value="45" min="10" max="120" />
+                                    <div class="input-group-addon">years</div>
+                            </div>
+                        </div>
+
+                        <!--height-->
+                        <div class="input-group">
+                            <label for="height">Height</label>
+                            <div class="input-group">
+                                      <input type="number" name="feet" value="5" min="1" max="8" />
+                                    <div class="input-group-addon">feet</div>
+                            </div>
+                            <div class="input-group">
+                                      <input type="number" name="inches" value="10" min="0" max="12" />
+                                    <div class="input-group-addon">inches</div>
+                            </div>
+                        </div>
+
+                        <!--weight-->
+                        <div class="input-group">
+                            <label for="weight">Weight</label>
+                            <div class="input-group">
+                                      <input type="number" name="weight" value="145" min="1" max="500" />
+                                    <div class="input-group-addon">pounds</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Race-->
+                    <div class="col-md-3">
+                           <h4 style="margin-bottom:50px">Race</h4>
+                               <select name="race">
+                                   <option value="white">White</option>
+                                   <option value="black">African-American</option>
+                                   <option value="other">Other</option>
+                               </select> 
+                    </div>
+
+                    <!--Tumor Characteristics-->
+                    <div class="col-md-3" style="text-align:left">
+                        <h4>Tumor Characteristics</h4>
+                        <p style="margin-bottom:20px">check all that apply</p>
+                        <!--primary Gleason grade >= 4 (pG1)-->
+                       
+                        <div class="well">
+                        <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="pg1" type="checkbox" class="shiny-bound-input">
+                                    <span>Primary Gleason grade >=4</span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--secondary Gleason grade  >=4 (pG2)-->
+                       
+                        <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="pg2" type="checkbox" class="shiny-bound-input">
+                                    <span>Secondary Gleason grade >=4</span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--seminar vesicle invasion (SVI)-->
+                    
+                        <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="svi" type="checkbox" class="shiny-bound-input">
+                                    <span>Seminal vesicle invasion</span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--positive surgical margins (SM)-->
+                       
+                        <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="sm" type="checkbox" class="shiny-bound-input">
+                                    <span>Positive surgical margins (SM)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--extra-capsular extension (ECE)-->
+                                       
+                        <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="ece" type="checkbox" class="shiny-bound-input">
+                                    <span>Extra-capsular extension (ECE)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--lymph node involvement (LNI)-->
+                     
+                          <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="lni" type="checkbox" class="shiny-bound-input">
+                                    <span>Lymph node involvement (LNI)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Data Input-->
+                    </div>
+                    </form>      
+                    
+                    </div>      
+                    <pre id="scores" style="height:110px" class="shiny-html-output"></pre>   
+        
+            </div>
+        </div><!-- /tool -->
+        <div class="footer" >
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+
+                        <div class="footer_container">
+                            <div class="height30"></div>
+                            <div class="height30"></div>
+                        </div>
+                        <div class="footer_bottom_content">
+                            <span>Copyright © 2015 <a href="http://medicine.stanford.edu">Stanford Medicine</a></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"  type="text/javascript"></script>
+
+    </body>
+</html>
