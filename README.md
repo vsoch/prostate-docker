@@ -2,7 +2,7 @@
 
 Risk After Prostate Surgery Shiny [Web Application](http://predict.shinyapps.io/raps), [Dockerized](https://hub.docker.com/r/vanessa/prostate-raps).
 
-![raps](img/raps.png)
+![raps](https://raw.githubusercontent.com/vsoch/prostate-docker/master/img/raps.png)
 
 We have developed a tool called RAPS (Risks After Prostate Surgery) that uses a man’s personal characteristics to estimate his probability of: a) prostate cancer recurrence, and b) dying without recurrence within 10 years of radical prostatectomy for his cancer.
 
